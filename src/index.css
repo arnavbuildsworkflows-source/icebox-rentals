@@ -1,0 +1,27 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,sans-serif;color:#1B1535;background:#fff;-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:#3B1A7A}a:hover{color:#22B8EC}
+input,select,textarea,button{font:inherit}
+:focus-visible{outline:3px solid #22B8EC;outline-offset:2px}
+[data-reveal],[data-reveal-group]>*{opacity:0;transform:translateY(16px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+[data-reveal="in"],[data-reveal-group="in"]>*{opacity:1;transform:none}
+@keyframes heroIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes sheetUp{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
+@keyframes shine{from{transform:translateX(-130%) skewX(-18deg)}to{transform:translateX(230%) skewX(-18deg)}}
+[data-cta]:hover [data-shine],[data-cta]:active [data-shine],[data-cta]:focus-visible [data-shine]{animation:shine .75s ease}
+@media (prefers-reduced-motion:reduce){[data-reveal],[data-reveal-group]>*{opacity:1;transform:none;transition:none}*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* Hover / active / focus states that the prototype expressed via style-hover / style-active / style-focus attributes */
+.btn-primary{transition:background .15s,transform .1s}
+.btn-primary:hover{background:#2C1260!important}
+.btn-primary:active{transform:scale(.985)}
+.btn-hero{transition:transform .1s,box-shadow .15s}
+.btn-hero:hover{box-shadow:0 18px 36px rgba(59,26,122,.38)!important}
+.btn-hero:active{transform:scale(.985)}
+.btn-cyan{transition:transform .1s,background .15s}
+.btn-cyan:hover{background:#4FC8F2!important}
+.btn-cyan:active{transform:scale(.985)}
+.btn-bar:active{transform:scale(.985)}
+.btn-close:hover{background:#E1E8EF!important}
+.faq-btn:hover{color:#3B1A7A!important}
+.field:focus{border-color:#3B1A7A!important}
